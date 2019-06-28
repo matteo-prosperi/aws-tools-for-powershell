@@ -1,4 +1,145 @@
-﻿### 3.3.522.0 (2019-05-31)
+﻿### 3.3.542.0 (2019-06-28)
+  * AWSPowerShell and AWSPowerShell.NetCore now use AWS .NET SDK 3.3.542.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon Alexa For Business
+    * Modified cmdlet New-ALXBContact: added parameters PhoneNumberList and SipAddress.
+    * Modified cmdlet Update-ALXBContact: added parameters PhoneNumberList and SipAddress.
+  * Amazon API Gateway
+    * Modified cmdlet New-AGDomainName: added parameter SecurityPolicy.
+  * Amazon API Gateway V2
+    * Added cmdlet Add-AG2ResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-AG2Tag leveraging the GetTags service API.
+    * Added cmdlet Remove-AG2ResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-AG2Api: added parameter Tag.
+    * Modified cmdlet New-AG2DomainName: added parameter Tag.
+    * Modified cmdlet New-AG2Stage: added parameter Tag.
+  * Amazon App Mesh
+    * Modified cmdlet New-AMSHVirtualNode: added parameters AwsCloudMap_Attribute, AwsCloudMap_NamespaceName and AwsCloudMap_ServiceName.
+    * Modified cmdlet Update-AMSHVirtualNode: added parameters AwsCloudMap_Attribute, AwsCloudMap_NamespaceName and AwsCloudMap_ServiceName.
+  * Amazon Certificate Manager Private Certificate Authority
+    * Modified cmdlet New-PCACertificate: added parameter TemplateArn.
+  * Amazon CloudWatch Application Insights. Added cmdlets to support the service. Cmdlets for the service have the noun prefix CWAI and can be listed using the command 'Get-AWSCmdletName -Service CWAI'. CloudWatch Application Insights detects errors and exceptions from logs, including .NET custom application logs, SQL Server logs, IIS logs, and more, and uses a combination of built-in rules and machine learning, such as dynamic baselining, to identify common problems. You can then easily drill into specific issues with CloudWatch Automatic Dashboards that are dynamically generated. These dashboards contain the most recent alarms, a summary of relevant metrics, and log snippets to help you identify root cause.
+  * Amazon CodeBuild
+    * Modified cmdlet New-CBProject: added parameters SecondarySourceVersion and SourceVersion.
+    * Modified cmdlet Update-CBProject: added parameters SecondarySourceVersion and SourceVersion.
+  * Amazon CodeCommit
+    * Added cmdlet Get-CCFileMergeConflict leveraging the DescribeMergeConflicts service API.
+    * Added cmdlet Get-CCFileMergeConflictBatch leveraging the BatchDescribeMergeConflicts service API.
+    * Added cmdlet Get-CCMergeCommit leveraging the GetMergeCommit service API.
+    * Added cmdlet Get-CCMergeOption leveraging the GetMergeOptions service API.
+    * Added cmdlet Merge-CCBranchesByFastForward leveraging the MergeBranchesByFastForward service API.
+    * Added cmdlet Merge-CCBranchesBySquash leveraging the MergeBranchesBySquash service API.
+    * Added cmdlet Merge-CCBranchesByThreeWay leveraging the MergeBranchesByThreeWay service API.
+    * Added cmdlet Merge-CCPullRequestBySquash leveraging the MergePullRequestBySquash service API.
+    * Added cmdlet Merge-CCPullRequestByThreeWay leveraging the MergePullRequestByThreeWay service API.
+    * Added cmdlet New-CCUnreferencedMergeCommit leveraging the CreateUnreferencedMergeCommit service API.
+    * Modified cmdlet Get-CCMergeConflict: added parameters ConflictDetailLevel, ConflictResolutionStrategy, MaxConflictFile and NextToken.
+  * Amazon Direct Connect
+    * Modified cmdlet Enable-DCPrivateVirtualInterface: added parameter NewPrivateVirtualInterfaceAllocation_Tag.
+    * Modified cmdlet Enable-DCPublicVirtualInterface: added parameter NewPublicVirtualInterfaceAllocation_Tag.
+    * Modified cmdlet Enable-DCTransitVirtualInterface: added parameter NewTransitVirtualInterfaceAllocation_Tag.
+    * Modified cmdlet New-DCConnection: added parameter Tag.
+    * Modified cmdlet New-DCHostedConnection: added parameter Tag.
+    * Modified cmdlet New-DCInterconnect: added parameter Tag.
+    * Modified cmdlet New-DCLag: added parameters ChildConnectionTag and Tag.
+    * Modified cmdlet New-DCPrivateVirtualInterface: added parameter NewPrivateVirtualInterface_Tag.
+    * Modified cmdlet New-DCPublicVirtualInterface: added parameter NewPublicVirtualInterface_Tag.
+    * Modified cmdlet New-DCTransitVirtualInterface: added parameter NewTransitVirtualInterface_Tag.
+  * Amazon EC2 Container Service
+    * Added cmdlet Submit-ECSAttachmentStateChange leveraging the SubmitAttachmentStateChanges service API.
+  * Amazon Elastic Compute Cloud
+    * Added cmdlet Edit-EC2TrafficMirrorFilterNetworkService leveraging the ModifyTrafficMirrorFilterNetworkServices service API.
+    * Added cmdlet Edit-EC2TrafficMirrorFilterRule leveraging the ModifyTrafficMirrorFilterRule service API.
+    * Added cmdlet Edit-EC2TrafficMirrorSession leveraging the ModifyTrafficMirrorSession service API.
+    * Added cmdlet Get-EC2TrafficMirrorFilter leveraging the DescribeTrafficMirrorFilters service API.
+    * Added cmdlet Get-EC2TrafficMirrorSession leveraging the DescribeTrafficMirrorSessions service API.
+    * Added cmdlet Get-EC2TrafficMirrorTarget leveraging the DescribeTrafficMirrorTargets service API.
+    * Added cmdlet New-EC2TrafficMirrorFilter leveraging the CreateTrafficMirrorFilter service API.
+    * Added cmdlet New-EC2TrafficMirrorFilterRule leveraging the CreateTrafficMirrorFilterRule service API.
+    * Added cmdlet New-EC2TrafficMirrorSession leveraging the CreateTrafficMirrorSession service API.
+    * Added cmdlet New-EC2TrafficMirrorTarget leveraging the CreateTrafficMirrorTarget service API.
+    * Added cmdlet Remove-EC2TrafficMirrorFilter leveraging the DeleteTrafficMirrorFilter service API.
+    * Added cmdlet Remove-EC2TrafficMirrorFilterRule leveraging the DeleteTrafficMirrorFilterRule service API.
+    * Added cmdlet Remove-EC2TrafficMirrorSession leveraging the DeleteTrafficMirrorSession service API.
+    * Added cmdlet Remove-EC2TrafficMirrorTarget leveraging the DeleteTrafficMirrorTarget service API.
+    * Modified cmdlet Edit-EC2Host: added parameter HostRecovery.
+    * Modified cmdlet New-EC2Host: added parameter HostRecovery.
+  * Amazon ElastiCache
+    * Added cmdlet Get-ECServiceUpdate leveraging the DescribeServiceUpdates service API.
+    * Added cmdlet Get-ECUpdateAction leveraging the DescribeUpdateActions service API.
+    * Added cmdlet Start-ECUpdateActionBatch leveraging the BatchApplyUpdateAction service API.
+    * Added cmdlet Stop-ECUpdateActionBatch leveraging the BatchStopUpdateAction service API.
+  * Amazon Glue
+    * Added cmdlet Get-GLUEWorkflow leveraging the GetWorkflow service API.
+    * Added cmdlet Get-GLUEWorkflowBatch leveraging the BatchGetWorkflows service API.
+    * Added cmdlet Get-GLUEWorkflowList leveraging the ListWorkflows service API.
+    * Added cmdlet Get-GLUEWorkflowRun leveraging the GetWorkflowRun service API.
+    * Added cmdlet Get-GLUEWorkflowRunList leveraging the GetWorkflowRuns service API.
+    * Added cmdlet Get-GLUEWorkflowRunProperty leveraging the GetWorkflowRunProperties service API.
+    * Added cmdlet New-GLUEWorkflow leveraging the CreateWorkflow service API.
+    * Added cmdlet Remove-GLUEWorkflow leveraging the DeleteWorkflow service API.
+    * Added cmdlet Start-GLUEWorkflowRun leveraging the StartWorkflowRun service API.
+    * Added cmdlet Update-GLUEWorkflow leveraging the UpdateWorkflow service API.
+    * Added cmdlet Write-GLUEWorkflowRunProperty leveraging the PutWorkflowRunProperties service API.
+    * Modified cmdlet New-GLUETrigger: added parameter WorkflowName.
+  * Amazon GuardDuty
+    * Added cmdlet Add-GDResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-GDResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-GDResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-GDDetector: added parameter Tag.
+    * Modified cmdlet New-GDFilter: added parameter Tag.
+    * Modified cmdlet New-GDIPSet: added parameter Tag.
+    * Modified cmdlet New-GDThreatIntelSet: added parameter Tag.
+  * Amazon Identity and Access Management
+    * Added cmdlet Get-IAMOrganizationsAccessReport leveraging the GetOrganizationsAccessReport service API.
+    * Added cmdlet New-IAMOrganizationsAccessReport leveraging the GenerateOrganizationsAccessReport service API.
+  * Amazon Neptune
+    * Modified cmdlet Edit-NPTDBCluster: added parameters CloudwatchLogsExportConfiguration_DisableLogType and CloudwatchLogsExportConfiguration_EnableLogType.
+    * Modified cmdlet New-NPTDBCluster: added parameter EnableCloudwatchLogsExport.
+    * Modified cmdlet Restore-NPTDBClusterFromSnapshot: added parameter EnableCloudwatchLogsExport.
+    * Modified cmdlet Restore-NPTDBClusterToPointInTime: added parameter EnableCloudwatchLogsExport.
+  * Amazon Organizations
+    * Added cmdlet Add-ORGResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-ORGResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-ORGResourceTag leveraging the UntagResource service API.
+  * Amazon Personalize. Added cmdlets to support the service. Cmdlets for the service have the noun prefix PERS and can be listed using the command 'Get-AWSCmdletName -Service PERS'. Amazon Personalize is a machine learning service that makes it easy for developers to create individualized recommendations for customers using their applications.
+  * Amazon Personalize Events. Added cmdlets to support the service. Cmdlets for the service have the noun prefix PERSE and can be listed using the command 'Get-AWSCmdletName -Service PERSE'.
+  * Amazon Personalize Runtime. Added cmdlets to support the service. Cmdlets for the service have the noun prefix PERSR and can be listed using the command 'Get-AWSCmdletName -Service PERSR'.
+  * Amazon RDS DataService
+    * Added cmdlet Start-RDSDTransaction leveraging the BeginTransaction service API.
+  * Amazon Relational Database Service
+    * Modified cmdlet Edit-RDSDBInstance: added parameter MaxAllocatedStorage.
+    * Modified cmdlet New-RDSDBInstance: added parameter MaxAllocatedStorage.
+  * Amazon SageMaker Service
+    * Modified cmdlet New-SMTransformJob: added parameters DataProcessing_InputFilter, DataProcessing_JoinSource and DataProcessing_OutputFilter.
+  * Amazon Security Hub
+    * [Breaking Change] Removed cmdlet Get-SHUBProductSubscriberList.
+    * Added cmdlet Add-SHUBResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-SHUBActionTarget leveraging the DescribeActionTargets service API.
+    * Added cmdlet Get-SHUBHub leveraging the DescribeHub service API.
+    * Added cmdlet Get-SHUBResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet New-SHUBActionTarget leveraging the CreateActionTarget service API.
+    * Added cmdlet Remove-SHUBActionTarget leveraging the DeleteActionTarget service API.
+    * Added cmdlet Remove-SHUBResourceTag leveraging the UntagResource service API.
+    * Added cmdlet Update-SHUBActionTarget leveraging the UpdateActionTarget service API.
+    * Modified cmdlet Enable-SHUBSecurityHub: added parameter Tag.
+  * Amazon Service Catalog
+    * Modified cmdlet Update-SCProvisioningArtifact: added parameter Guidance.
+  * Amazon Service Quotas. Added cmdlets to support the service. Cmdlets for the service have the noun prefix SQ and can be listed using the command 'Get-AWSCmdletName -Service SQ'. Service Quotas enables you to view and manage your quotas for AWS services from a central location.
+  * Amazon Simple Email Service
+    * Added cmdlet Write-SESConfigurationSetDeliveryOption leveraging the PutConfigurationSetDeliveryOptions service API.
+  * Amazon Storage Gateway
+    * Added cmdlet Update-SGSMBSecurityStrategy leveraging the UpdateSMBSecurityStrategy service API.
+  * Amazon Systems Manager
+    * Added cmdlet Get-SSMOpsItem leveraging the GetOpsItem service API.
+    * Added cmdlet Get-SSMOpsItemSummary leveraging the DescribeOpsItems service API.
+    * Added cmdlet Get-SSMOpsSummary leveraging the GetOpsSummary service API.
+    * Added cmdlet New-SSMOpsItem leveraging the CreateOpsItem service API.
+    * Added cmdlet Update-SSMOpsItem leveraging the UpdateOpsItem service API.
+    * Modified cmdlet Remove-SSMDocument: added parameters DocumentVersion and VersionName.
+  * Amazon WorkSpaces
+    * Added cmdlet Copy-WKSWorkspaceImage leveraging the CopyWorkspaceImage service API.
+
+### 3.3.522.0 (2019-05-31)
   * AWSPowerShell and AWSPowerShell.NetCore now use AWS .NET SDK 3.3.522.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon Alexa For Business
     * Added cmdlet Add-ALXBContactToAddressBook leveraging the AssociateContactWithAddressBook service API.
