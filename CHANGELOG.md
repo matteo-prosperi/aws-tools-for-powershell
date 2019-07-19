@@ -1,4 +1,121 @@
-﻿### 3.3.542.0 (2019-06-28)
+﻿### 3.3.553.0 (2019-07-19)
+  * AWSPowerShell and AWSPowerShell.NetCore now use AWS .NET SDK 3.3.553.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon Amplify
+    * Added cmdlet Add-AMPResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-AMPResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Get-AMPWebhook leveraging the GetWebhook service API.
+    * Added cmdlet Get-AMPWebhookList leveraging the ListWebhooks service API.
+    * Added cmdlet New-AMPDeployment leveraging the CreateDeployment service API.
+    * Added cmdlet New-AMPWebhook leveraging the CreateWebhook service API.
+    * Added cmdlet Remove-AMPResourceTag leveraging the UntagResource service API.
+    * Added cmdlet Remove-AMPWebhook leveraging the DeleteWebhook service API.
+    * Added cmdlet Start-AMPDeployment leveraging the StartDeployment service API.
+    * Added cmdlet Update-AMPWebhook leveraging the UpdateWebhook service API.
+    * Modified cmdlet New-AMPApp: added parameters AccessToken, AutoBranchCreationConfig_BasicAuthCredential, AutoBranchCreationConfig_BuildSpec, AutoBranchCreationConfig_EnableAutoBuild, AutoBranchCreationConfig_EnableBasicAuth, AutoBranchCreationConfig_EnvironmentVariable, AutoBranchCreationConfig_Framework, AutoBranchCreationConfig_Stage, AutoBranchCreationPattern and EnableAutoBranchCreation.
+    * Modified cmdlet New-AMPBranch: added parameter DisplayName.
+    * Modified cmdlet Update-AMPApp: added parameters AutoBranchCreationConfig_BasicAuthCredential, AutoBranchCreationConfig_BuildSpec, AutoBranchCreationConfig_EnableAutoBuild, AutoBranchCreationConfig_EnableBasicAuth, AutoBranchCreationConfig_EnvironmentVariable, AutoBranchCreationConfig_Framework, AutoBranchCreationConfig_Stage, AutoBranchCreationPattern and EnableAutoBranchCreation.
+    * Modified cmdlet Update-AMPBranch: added parameter DisplayName.
+  * Amazon CloudWatch
+    * Added cmdlet Get-CWAnomalyDetector leveraging the DescribeAnomalyDetectors service API.
+    * Added cmdlet Remove-CWAnomalyDetector leveraging the DeleteAnomalyDetector service API.
+    * Added cmdlet Write-CWAnomalyDetector leveraging the PutAnomalyDetector service API.
+    * Modified cmdlet Write-CWMetricAlarm: added parameter ThresholdMetricId.
+  * Amazon CloudWatch Events
+    * Added cmdlet Disable-CWEEventSource leveraging the DeactivateEventSource service API.
+    * Added cmdlet Enable-CWEEventSource leveraging the ActivateEventSource service API.
+    * Added cmdlet Get-CWEEventBusList leveraging the ListEventBuses service API.
+    * Added cmdlet Get-CWEEventSource leveraging the DescribeEventSource service API.
+    * Added cmdlet Get-CWEEventSourceList leveraging the ListEventSources service API.
+    * Added cmdlet Get-CWEPartnerEventSource leveraging the DescribePartnerEventSource service API.
+    * Added cmdlet Get-CWEPartnerEventSourceAccountList leveraging the ListPartnerEventSourceAccounts service API.
+    * Added cmdlet Get-CWEPartnerEventSourceList leveraging the ListPartnerEventSources service API.
+    * Added cmdlet New-CWEEventBus leveraging the CreateEventBus service API.
+    * Added cmdlet New-CWEPartnerEventSource leveraging the CreatePartnerEventSource service API.
+    * Added cmdlet Remove-CWEEventBus leveraging the DeleteEventBus service API.
+    * Added cmdlet Remove-CWEPartnerEventSource leveraging the DeletePartnerEventSource service API.
+    * Added cmdlet Write-CWEPartnerEvent leveraging the PutPartnerEvents service API.
+    * Modified cmdlet Disable-CWERule: added parameter EventBusName.
+    * Modified cmdlet Enable-CWERule: added parameter EventBusName.
+    * Modified cmdlet Get-CWEEventBus: added parameter Name.
+    * Modified cmdlet Get-CWERule: added parameter EventBusName.
+    * Modified cmdlet Get-CWERuleDetail: added parameter EventBusName.
+    * Modified cmdlet Get-CWERuleNamesByTarget: added parameter EventBusName.
+    * Modified cmdlet Get-CWETargetsByRule: added parameter EventBusName.
+    * Modified cmdlet Remove-CWEPermission: added parameter EventBusName.
+    * Modified cmdlet Remove-CWERule: added parameter EventBusName.
+    * Modified cmdlet Remove-CWETarget: added parameter EventBusName.
+    * Modified cmdlet Write-CWEPermission: added parameter EventBusName.
+    * Modified cmdlet Write-CWERule: added parameter EventBusName.
+    * Modified cmdlet Write-CWETarget: added parameter EventBusName.
+  * Amazon Config
+    * Added cmdlet Get-CFGOrganizationConfigRule leveraging the DescribeOrganizationConfigRules service API.
+    * Added cmdlet Get-CFGOrganizationConfigRuleDetailedStatus leveraging the GetOrganizationConfigRuleDetailedStatus service API.
+    * Added cmdlet Get-CFGOrganizationConfigRuleStatus leveraging the DescribeOrganizationConfigRuleStatuses service API.
+    * Added cmdlet Remove-CFGOrganizationConfigRule leveraging the DeleteOrganizationConfigRule service API.
+    * Added cmdlet Write-CFGOrganizationConfigRule leveraging the PutOrganizationConfigRule service API.
+  * Amazon Cost Explorer
+    * Added cmdlet Get-CEUsageForecast leveraging the GetUsageForecast service API.
+  * Amazon Database Migration Service
+    * Modified cmdlet Edit-DMSEndpoint: added parameters S3Settings_IncludeOpForFullLoad and S3Settings_TimestampColumnName.
+    * [Breaking Change] Modified cmdlet Get-DMSAccountAttribute: output changed from Amazon.DatabaseMigrationService.Model.AccountQuota to Amazon.DatabaseMigrationService.Model.DescribeAccountAttributesResponse.
+    * Modified cmdlet New-DMSEndpoint: added parameters S3Settings_IncludeOpForFullLoad and S3Settings_TimestampColumnName.
+  * Amazon DocumentDB
+    * Added cmdlet Start-DOCDBCluster leveraging the StartDBCluster service API.
+    * Added cmdlet Stop-DOCDBCluster leveraging the StopDBCluster service API.
+    * Modified cmdlet Edit-DOCDBCluster: added parameter DeletionProtection.
+    * Modified cmdlet New-DOCDBCluster: added parameter DeletionProtection.
+    * Modified cmdlet Restore-DOCDBClusterFromSnapshot: added parameter DeletionProtection.
+    * Modified cmdlet Restore-DOCDBClusterToPointInTime: added parameter DeletionProtection.
+  * Amazon EC2 Container Service
+    * Modified cmdlet New-ECSCluster: added parameter Setting.
+  * Amazon Elastic Compute Cloud
+    * Modified cmdlet Edit-EC2SpotFleetRequest: added parameter OnDemandTargetCapacity.
+    * Modified cmdlet New-EC2Fleet: added parameters OnDemandOptions_MaxTotalPrice and SpotOptions_MaxTotalPrice.
+    * [Breaking Change] Modified cmdlet Register-EC2PrivateIpAddress: output changed from None and System.String to Amazon.EC2.Model.AssignedPrivateIpAddress; removed parameter PassThru.
+    * Modified cmdlet Request-EC2SpotFleet: added parameters SpotFleetRequestConfig_OnDemandMaxTotalPrice and SpotFleetRequestConfig_SpotMaxTotalPrice.
+  * Amazon Elemental MediaStore
+    * Added cmdlet Add-EMSResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-EMSResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-EMSResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-EMSContainer: added parameter Tag.
+  * Amazon EventBridge. Added cmdlets to support the service. Cmdlets for the service have the noun prefix EVB and can be listed using the command 'Get-AWSCmdletName -Service EVB'. Amazon EventBridge is a serverless event bus service that makes it easy to connect your applications with data from a variety of sources, including AWS services, partner applications, and your own applications.
+  * Amazon GameLift Service
+    * Modified cmdlet New-GMLMatchmakingConfiguration: added parameter BackfillMode.
+    * Modified cmdlet Update-GMLMatchmakingConfiguration: added parameter BackfillMode.
+  * Amazon QuickSight
+    * Modified cmdlet Get-QSDashboardEmbedUrl: added parameter UserArn.
+  * Amazon Relational Database Service
+    * Modified cmdlet Edit-RDSDBCluster: added parameters AllowMajorVersionUpgrade and DBInstanceParameterGroupName.
+    * Modified cmdlet Get-RDSDBCluster: added parameter IncludeShared.
+  * Amazon Service Catalog
+    * Added cmdlet Get-SCServiceActionExecutionParameter leveraging the DescribeServiceActionExecutionParameters service API.
+    * Modified cmdlet Start-SCProvisionedProductServiceActionExecution: added parameter Parameter.
+  * Amazon Simple Workflow Service
+    * Added cmdlet Add-SWFResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-SWFResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-SWFResourceTag leveraging the UntagResource service API.
+    * Added cmdlet Restore-SWFActivityType leveraging the UndeprecateActivityType service API.
+    * Added cmdlet Restore-SWFDomain leveraging the UndeprecateDomain service API.
+    * Added cmdlet Restore-SWFWorkflowType leveraging the UndeprecateWorkflowType service API.
+    * Modified cmdlet New-SWFDomain: added parameter Tag.
+  * Amazon WAF
+    * Added cmdlet Add-WAFResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-WAFResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-WAFResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-WAFRateBasedRule: added parameter Tag.
+    * Modified cmdlet New-WAFRule: added parameter Tag.
+    * Modified cmdlet New-WAFRuleGroup: added parameter Tag.
+    * Modified cmdlet New-WAFWebACL: added parameter Tag.
+  * Amazon WAF Regional
+    * Added cmdlet Add-WAFRResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-WAFRResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-WAFRResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-WAFRRateBasedRule: added parameter Tag.
+    * Modified cmdlet New-WAFRRule: added parameter Tag.
+    * Modified cmdlet New-WAFRRuleGroup: added parameter Tag.
+    * Modified cmdlet New-WAFRWebACL: added parameter Tag.
+
+### 3.3.542.0 (2019-06-28)
   * AWSPowerShell and AWSPowerShell.NetCore now use AWS .NET SDK 3.3.542.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon Alexa For Business
     * Modified cmdlet New-ALXBContact: added parameters PhoneNumberList and SipAddress.
