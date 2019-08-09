@@ -6,15 +6,16 @@ This repository is meant to be used as a way to collect feedback from users of t
 
 ## AWS Tools for Powershell Modules
 
-The _AWS Tools for Powershell_ modules [AWSPowerShell](https://www.powershellgallery.com/packages/AWSPowerShell) and [AWSPowerShell.NetCore](https://www.powershellgallery.com/packages/AWSPowerShell.NetCore) are available from [PowerShell Gallery](https://www.powershellgallery.com/).
+The _AWS Tools for Powershell_ modules [AWSPowerShell](https://www.powershellgallery.com/packages/AWSPowerShell), [AWSPowerShell.NetCore](https://www.powershellgallery.com/packages/AWSPowerShell.NetCore) and [AWS.Tools](https://www.powershellgallery.com/packages/AWS.Tools.Common) are available from [PowerShell Gallery](https://www.powershellgallery.com/).
 
 
-| Module | [AWSPowerShell](https://www.powershellgallery.com/packages/AWSPowerShell) | [AWSPowerShell.NetCore](https://www.powershellgallery.com/packages/AWSPowerShell.NetCore) |
+| Module | **Compatible PowerShell Versions** |  |
 |---|---|---|
-| **Compatible PowerShell Versions** | 2.0 - 5.1 | 6.0 - 6.1 |
-| **Experimental compatibility** | - | 3.0 - 5.1 (when .NET Framework 4.7.2 is installed)* |
+| **[AWSPowerShell](https://www.powershellgallery.com/packages/AWSPowerShell)** | 2.0 - 5.1 |
+| **[AWSPowerShell.NetCore](https://www.powershellgallery.com/packages/AWSPowerShell.NetCore)** | 6.0 - 6.2 (and 3.0 - 5.1 when .NET Framework 4.7.2 is installed) |
+| **[AWS.Tools](https://www.powershellgallery.com/packages/AWS.Tools.Common)*** | 6.0 - 6.2 (and 3.0 - 5.1 when .NET Framework 4.7.2 is installed) |
 
-*As a preview feature, _AWSPowerShell.NetCore_, starting with version 3.3.485.0, can be tested on PowerShell versions 3.0 to 5.1 when at least .NET Framework 4.7.2 is installed. Please provide feedback on any compatibility problem by opening a GitHub issue in this repository.
+*_AWS.Tools_ is the new modular variant of AWS Tools for PowerShell offered in prerelease. Please provide feedback by opening a GitHub issue in this repository if you encounter any problem using it. In order to manage each AWS service, install from [PowerShell Gallery](https://www.powershellgallery.com/) the corresponding module (e.g. [AWS.Tools.EC2](https://www.powershellgallery.com/packages/AWS.Tools.EC2), [AWS.Tools.S3](https://www.powershellgallery.com/packages/AWS.Tools.S3)...).
 
 ## Additional Resources
 

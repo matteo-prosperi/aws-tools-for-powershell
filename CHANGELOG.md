@@ -1,4 +1,63 @@
-﻿### 3.3.553.0 (2019-07-19)
+﻿### 3.3.563.0 (2019-08-08)
+  * A new new modular variant of AWS Tools for PowerShell ([AWS.Tools](https://www.powershellgallery.com/packages/AWS.Tools.Common)) is now offered in prerelease. Please provide feedback by opening a GitHub issue [here](https://github.com/aws/aws-tools-for-powershell/issues) if you encounter any problem using it. In order to manage each AWS service, install from [PowerShell Gallery](https://www.powershellgallery.com/) the corresponding module (e.g. [AWS.Tools.EC2](https://www.powershellgallery.com/packages/AWS.Tools.EC2), [AWS.Tools.S3](https://www.powershellgallery.com/packages/AWS.Tools.S3)...).
+  * AWS Tools for PowerShell now use AWS .NET SDK 3.3.563.1 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon Batch
+    * Modified cmdlet Register-BATJobDefinition: added parameter LinuxParameters_Device.
+  * Amazon CloudWatch Application Insights
+    * Added cmdlet Update-CWAIApplication leveraging the UpdateApplication service API.
+    * Modified cmdlet New-CWAIApplication: added parameters OpsCenterEnabled and OpsItemSNSTopicArn.
+  * Amazon CloudWatch Logs
+    * Modified cmdlet Start-CWLQuery: added parameter LogGroupNameList.
+  * Amazon Cost Explorer
+    * Added cmdlet Get-CERightsizingRecommendation leveraging the GetRightsizingRecommendation service API.
+  * Amazon DataSync
+    * Modified cmdlet New-DSYNAgent: added parameters SecurityGroupArn, SubnetArn and VpcEndpointId.
+  * Amazon EC2 Container Registry
+    * Added cmdlet Write-ECRImageTagMutability leveraging the PutImageTagMutability service API.
+    * Modified cmdlet New-ECRRepository: added parameter ImageTagMutability.
+  * Amazon Elastic Compute Cloud
+    * Added cmdlet Get-EC2CapacityReservationUsage leveraging the GetCapacityReservationUsage service API.
+    * Modified cmdlet New-EC2LaunchTemplate: added parameter TagSpecification.
+    * Modified cmdlet Add-EC2CapacityReservation: added parameter AvailabilityZoneId.
+    * Modified cmdlet Edit-EC2ClientVpnEndpoint: added parameter SplitTunnel.
+    * Modified cmdlet Get-EC2Region: added parameter AllRegion.
+    * Modified cmdlet New-EC2ClientVpnEndpoint: added parameter SplitTunnel.
+  * Amazon Elemental MediaConnect
+    * Modified cmdlet Update-EMCNFlowOutput: added parameters CidrAllowList and RemoteId.
+  * Amazon Elemental MediaConvert
+    * Modified cmdlet New-EMCJob: added parameter Priority.
+    * Modified cmdlet New-EMCJobTemplate: added parameter Priority.
+    * Modified cmdlet Update-EMCJobTemplate: added parameter Priority.
+  * Amazon Glue
+    * Added cmdlet Get-GLUEJobBookmark leveraging the GetJobBookmark service API.
+    * Modified cmdlet New-GLUEDevEndpoint: added parameters NumberOfWorker and WorkerType.
+    * Modified cmdlet New-GLUEJob: added parameter GlueVersion.
+    * Modified cmdlet Reset-GLUEJobBookmark: added parameter RunId.
+  * Amazon IoT
+    * Added cmdlet Get-IOTAuditFinding leveraging the DescribeAuditFinding service API.
+    * Added cmdlet Get-IOTAuditMitigationActionsExecutionList leveraging the ListAuditMitigationActionsExecutions service API.
+    * Added cmdlet Get-IOTAuditMitigationActionsTask leveraging the DescribeAuditMitigationActionsTask service API.
+    * Added cmdlet Get-IOTAuditMitigationActionsTaskList leveraging the ListAuditMitigationActionsTasks service API.
+    * Added cmdlet Get-IOTMitigationAction leveraging the DescribeMitigationAction service API.
+    * Added cmdlet Get-IOTMitigationActionList leveraging the ListMitigationActions service API.
+    * Added cmdlet New-IOTMitigationAction leveraging the CreateMitigationAction service API.
+    * Added cmdlet Remove-IOTMitigationAction leveraging the DeleteMitigationAction service API.
+    * Added cmdlet Start-IOTAuditMitigationActionsTask leveraging the StartAuditMitigationActionsTask service API.
+    * Added cmdlet Stop-IOTAuditMitigationActionsTask leveraging the CancelAuditMitigationActionsTask service API.
+    * Added cmdlet Update-IOTMitigationAction leveraging the UpdateMitigationAction service API.
+  * Amazon MQ
+    * Modified cmdlet New-MQBroker: added parameters EncryptionOptions_KmsKeyId and EncryptionOptions_UseAwsOwnedKey.
+  * Amazon Pinpoint
+    * Added cmdlet Get-PINApplicationDateRangeKpi leveraging the GetApplicationDateRangeKpi service API.
+    * Added cmdlet Get-PINCampaignDateRangeKpi leveraging the GetCampaignDateRangeKpi service API.
+  * Amazon Polly
+    * Modified cmdlet Get-POLSpeech: added parameter Engine.
+    * Modified cmdlet Get-POLVoice: added parameter Engine.
+    * Modified cmdlet Start-POLSpeechSynthesisTask: added parameter Engine.
+  * Amazon Security Token Service
+    * Added cmdlet Get-STSAccessKeyInfo leveraging the GetAccessKeyInfo service API.
+
+### 3.3.553.0 (2019-07-19)
   * AWSPowerShell and AWSPowerShell.NetCore now use AWS .NET SDK 3.3.553.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon Amplify
     * Added cmdlet Add-AMPResourceTag leveraging the TagResource service API.
