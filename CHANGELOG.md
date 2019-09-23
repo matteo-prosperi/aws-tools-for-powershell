@@ -1,4 +1,129 @@
-﻿### 3.3.563.1 (2019-08-09)
+﻿### 3.3.590.0 (2019-09-23)
+  * AWS Tools for PowerShell now use AWS .NET SDK 3.3.590.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon Alexa For Business
+    * Modified cmdlet New-ALXBProfile: added parameter Locale.
+    * Modified cmdlet Update-ALXBProfile: added parameter Locale.
+  * Amazon API Gateway
+    * Modified cmdlet New-AGDomainName: added parameter EndpointConfiguration_VpcEndpointId.
+    * Modified cmdlet New-AGRestApi: added parameter EndpointConfiguration_VpcEndpointId.
+  * Amazon API Gateway Management API
+    * Added cmdlet Get-AGMConnection leveraging the GetConnection service API.
+    * Added cmdlet Remove-AGMConnection leveraging the DeleteConnection service API.
+  * Amazon App Mesh
+    * Modified cmdlet New-AMSHRoute: added parameters Match_Header, Match_Method, Match_Scheme, PerRetryTimeout_Unit, PerRetryTimeout_Value, RetryPolicy_HttpRetryEvent, RetryPolicy_MaxRetry, RetryPolicy_TcpRetryEvent and Spec_Priority.
+    * Modified cmdlet Update-AMSHRoute: added parameters Match_Header, Match_Method, Match_Scheme, PerRetryTimeout_Unit, PerRetryTimeout_Value, RetryPolicy_HttpRetryEvent, RetryPolicy_MaxRetry, RetryPolicy_TcpRetryEvent and Spec_Priority.
+  * Amazon Application Auto Scaling
+    * Modified cmdlet Add-AASScalableTarget: added parameters SuspendedState_DynamicScalingInSuspended, SuspendedState_DynamicScalingOutSuspended and SuspendedState_ScheduledScalingSuspended.
+  * Amazon AppStream
+    * Modified cmdlet New-APSFleet: added parameter IamRoleArn.
+    * Modified cmdlet New-APSImageBuilder: added parameters AccessEndpoint and IamRoleArn.
+    * Modified cmdlet New-APSStack: added parameter AccessEndpoint.
+    * Modified cmdlet Update-APSFleet: added parameter IamRoleArn.
+    * Modified cmdlet Update-APSStack: added parameter AccessEndpoint.
+  * Amazon AppSync
+    * Modified cmdlet New-ASYNGraphqlApi: added parameter LogConfig_ExcludeVerboseContent.
+    * Modified cmdlet Update-ASYNGraphqlApi: added parameter LogConfig_ExcludeVerboseContent.
+  * Amazon Athena
+    * Modified cmdlet New-ATHWorkGroup: added parameter Configuration_RequesterPaysEnabled.
+    * Modified cmdlet Update-ATHWorkGroup: added parameter ConfigurationUpdates_RequesterPaysEnabled.
+  * Amazon CodeBuild
+    * Modified cmdlet Import-CBSourceCredential: added parameter ShouldOverwrite.
+  * Amazon CodeCommit
+    * Added cmdlet Get-CCCommitBatch leveraging the BatchGetCommits service API.
+  * Amazon Config
+    * Added cmdlet Get-CFGRemediationException leveraging the DescribeRemediationExceptions service API.
+    * Added cmdlet Remove-CFGRemediationException leveraging the DeleteRemediationExceptions service API.
+    * Added cmdlet Write-CFGRemediationException leveraging the PutRemediationExceptions service API.
+  * Amazon Cost and Usage Report
+    * Added cmdlet Edit-CURReportDefinition leveraging the ModifyReportDefinition service API.
+  * Amazon DataSync
+    * Added cmdlet Get-DSYNLocationSmb leveraging the DescribeLocationSmb service API.
+    * Added cmdlet New-DSYNLocationSmb leveraging the CreateLocationSmb service API.
+  * Amazon EC2 Container Service
+    * Added cmdlet Update-ECSClusterSetting leveraging the UpdateClusterSettings service API.
+    * Modified cmdlet New-ECSTask: added parameter Overrides_InferenceAcceleratorOverride.
+    * Modified cmdlet Register-ECSTaskDefinition: added parameter InferenceAccelerator.
+    * Modified cmdlet Start-ECSTask: added parameter Overrides_InferenceAcceleratorOverride.
+  * Amazon Elastic Compute Cloud
+    * Added cmdlet Edit-EC2VpnTunnelCertificate leveraging the ModifyVpnTunnelCertificate service API.
+    * Added cmdlet Edit-EC2VpnTunnelOption leveraging the ModifyVpnTunnelOptions service API.
+    * Added cmdlet Export-EC2Image leveraging the ExportImage service API.
+    * Added cmdlet Get-EC2ExportImageTask leveraging the DescribeExportImageTasks service API.
+    * Added cmdlet Send-EC2DiagnosticInterrupt leveraging the SendDiagnosticInterrupt service API.
+    * Modified cmdlet Edit-EC2VpnConnection: added parameter CustomerGatewayId.
+    * Modified cmdlet New-EC2CustomerGateway: added parameter CertificateArn.
+    * Modified cmdlet New-EC2FlowLog: added parameter LogFormat.
+  * Amazon Elastic Container Service for Kubernetes
+    * Added cmdlet Add-EKSResourceTag leveraging the TagResource service API.
+    * Added cmdlet Get-EKSResourceTag leveraging the ListTagsForResource service API.
+    * Added cmdlet Remove-EKSResourceTag leveraging the UntagResource service API.
+    * Modified cmdlet New-EKSCluster: added parameter Tag.
+  * Amazon Elastic MapReduce
+    * Added cmdlet Get-EMRBlockPublicAccessConfiguration leveraging the GetBlockPublicAccessConfiguration service API.
+    * Added cmdlet Write-EMRBlockPublicAccessConfiguration leveraging the PutBlockPublicAccessConfiguration service API.
+  * Amazon ElastiCache
+    * Modified cmdlet Copy-ECSnapshot: added parameter KmsKeyId.
+    * Modified cmdlet New-ECReplicationGroup: added parameter KmsKeyId.
+    * Modified cmdlet New-ECSnapshot: added parameter KmsKeyId.
+  * Amazon Elemental MediaConvert
+    * Modified cmdlet New-EMCJob: added parameter SimulateReservedQueue.
+    * Modified cmdlet New-EMCQueue: added parameter Status.
+  * Amazon Forecast Query Service. Added cmdlets to support the service. Cmdlets for the service have the noun prefix FRCQ and can be listed using the command 'Get-AWSCmdletName -Service FRCQ'.
+  * Amazon Forecast Service. Added cmdlets to support the service. Cmdlets for the service have the noun prefix FRC and can be listed using the command 'Get-AWSCmdletName -Service FRC'.
+  * Amazon GameLift Service
+    * Modified cmdlet New-GMLFleet: added parameter CertificateConfiguration_CertificateType.
+  * Amazon Glacier
+    * Modified cmdlet Start-GLCJob: renamed parameter Select as SelectParameter.
+  * Amazon Glue
+    * Added cmdlet Find-GLUETable leveraging the SearchTables service API.
+    * Added cmdlet Get-GLUEMLTaskRun leveraging the GetMLTaskRun service API.
+    * Added cmdlet Get-GLUEMLTaskRunList leveraging the GetMLTaskRuns service API.
+    * Added cmdlet Get-GLUEMLTransform leveraging the GetMLTransform service API.
+    * Added cmdlet Get-GLUEMLTransformList leveraging the GetMLTransforms service API.
+    * Added cmdlet New-GLUEMLTransform leveraging the CreateMLTransform service API.
+    * Added cmdlet Remove-GLUEMLTransform leveraging the DeleteMLTransform service API.
+    * Added cmdlet Start-GLUEExportLabelsTaskRun leveraging the StartExportLabelsTaskRun service API.
+    * Added cmdlet Start-GLUEImportLabelsTaskRun leveraging the StartImportLabelsTaskRun service API.
+    * Added cmdlet Start-GLUEMLEvaluationTaskRun leveraging the StartMLEvaluationTaskRun service API.
+    * Added cmdlet Start-GLUEMLLabelingSetGenerationTaskRun leveraging the StartMLLabelingSetGenerationTaskRun service API.
+    * Added cmdlet Stop-GLUEMLTaskRun leveraging the CancelMLTaskRun service API.
+    * Added cmdlet Update-GLUEMLTransform leveraging the UpdateMLTransform service API.
+    * Modified cmdlet New-GLUEDevEndpoint: added parameter GlueVersion.
+  * Amazon IoT
+    * Modified cmdlet New-IOTTopicRule: added parameter Republish_Qo.
+    * Modified cmdlet Set-IOTTopicRule: added parameter Republish_Qo.
+  * Amazon Lake Formation. Added cmdlets to support the service. Cmdlets for the service have the noun prefix LKF and can be listed using the command 'Get-AWSCmdletName -Service LKF'.
+  * Amazon Lambda
+    * Modified cmdlet New-LMEventSourceMapping: added parameter MaximumBatchingWindowInSecond.
+    * Modified cmdlet Update-LMEventSourceMapping: added parameter MaximumBatchingWindowInSecond.
+  * Amazon Lex
+    * Added cmdlet Get-LEXSession leveraging the GetSession service API.
+    * Added cmdlet Remove-LEXSession leveraging the DeleteSession service API.
+    * Added cmdlet Write-LEXSession leveraging the PutSession service API.
+  * Amazon MQ
+    * Modified cmdlet Update-MQBroker: added parameter SecurityGroup.
+  * Amazon QLDB. Added cmdlets to support the service. Cmdlets for the service have the noun prefix QLDB and can be listed using the command 'Get-AWSCmdletName -Service QLDB'.
+  * Amazon QLDB Session. Added cmdlets to support the service. Cmdlets for the service have the noun prefix QLDBS and can be listed using the command 'Get-AWSCmdletName -Service QLDBS'.
+  * Amazon Relational Database Service
+    * Modified cmdlet New-RDSDBCluster: added parameter EnableHttpEndpoint.
+    * Modified cmdlet New-RDSDBInstanceReadReplica: added parameter DBParameterGroupName.
+  * Amazon Resource Access Manager
+    * Added cmdlet Get-RAMPendingInvitationResourceList leveraging the ListPendingInvitationResources service API.
+  * Amazon RoboMaker
+    * Modified cmdlet New-ROBOSimulationJob: added parameters DataSource and LoggingConfig_RecordAllRosTopic.
+  * Amazon SageMaker Service
+    * Modified cmdlet New-SMCompilationJob: added parameter StoppingCondition_MaxWaitTimeInSecond.
+    * Modified cmdlet New-SMHyperParameterTuningJob: added parameters CheckpointConfig_LocalPath, CheckpointConfig_S3Uri, StoppingCondition_MaxWaitTimeInSecond and TrainingJobDefinition_EnableManagedSpotTraining.
+    * Modified cmdlet New-SMTrainingJob: added parameters CheckpointConfig_LocalPath, CheckpointConfig_S3Uri, EnableManagedSpotTraining and StoppingCondition_MaxWaitTimeInSecond.
+  * Amazon Simple Queue Service
+    * Modified cmdlet New-SQSQueue: added parameter Tag.
+    * Modified cmdlet Send-SQSMessage: added parameter MessageSystemAttribute.
+  * Amazon Storage Gateway
+    * Modified cmdlet New-SGSnapshotFromVolumeRecoveryPoint: added parameter Tag.
+    * Modified cmdlet Update-SGGatewayInformation: added parameter CloudWatchLogGroupARN.
+  * Amazon WorkMail Message Flow. Added cmdlets to support the service. Cmdlets for the service have the noun prefix WMMF and can be listed using the command 'Get-AWSCmdletName -Service WMMF'.
+
+### 3.3.563.1 (2019-08-09)
   * Fixing bug introduced in 3.3.563.0 resulting in variables being set in the local scope importing AWS Tools for PowerShell modules.
 
 ### 3.3.563.0 (2019-08-08)
