@@ -1,4 +1,127 @@
-﻿### 3.3.590.0 (2019-09-23)
+﻿### 3.3.604.0 (2019-10-11)
+  * AWS Tools for PowerShell now use AWS .NET SDK 3.3.604.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon Amplify
+    * Added cmdlet Get-AMPArtifactList leveraging the ListArtifacts service API.
+    * Added cmdlet Get-AMPArtifactUrl leveraging the GetArtifactUrl service API.
+    * Added cmdlet New-AMPAccessLog leveraging the GenerateAccessLogs service API.
+    * Modified cmdlet New-AMPApp: added parameter AutoBranchCreationConfig_EnablePullRequestPreview.
+    * Modified cmdlet New-AMPBranch: added parameter EnablePullRequestPreview.
+    * Modified cmdlet Update-AMPApp: added parameters AccessToken, AutoBranchCreationConfig_EnablePullRequestPreview, OauthToken and Repository.
+    * Modified cmdlet Update-AMPBranch: added parameter EnablePullRequestPreview.
+  * Amazon Cognito Identity Provider
+    * Modified cmdlet Confirm-CGIPForgotPassword: added parameter ClientMetadata.
+    * Modified cmdlet Confirm-CGIPUserRegistration: added parameter ClientMetadata.
+    * Modified cmdlet Confirm-CGIPUserRegistrationAdmin: added parameter ClientMetadata.
+    * Modified cmdlet Get-CGIPUserAttributeVerificationCode: added parameter ClientMetadata.
+    * Modified cmdlet New-CGIPUserAdmin: added parameter ClientMetadata.
+    * Modified cmdlet Register-CGIPUserInPool: added parameter ClientMetadata.
+    * Modified cmdlet Reset-CGIPForgottenPassword: added parameter ClientMetadata.
+    * Modified cmdlet Reset-CGIPUserPasswordAdmin: added parameter ClientMetadata.
+    * Modified cmdlet Send-CGIPAuthChallengeResponse: added parameter ClientMetadata.
+    * Modified cmdlet Send-CGIPAuthChallengeResponseAdmin: added parameter ClientMetadata.
+    * Modified cmdlet Send-CGIPConfirmationCode: added parameter ClientMetadata.
+    * Modified cmdlet Update-CGIPUserAttribute: added parameter ClientMetadata.
+    * Modified cmdlet Update-CGIPUserAttributeAdmin: added parameter ClientMetadata.
+  * Amazon Comprehend Medical
+    * Added cmdlet Find-CMPMMedicalEntityV2 leveraging the DetectEntitiesV2 service API.
+    * Added cmdlet Get-CMPMEntitiesDetectionV2Job leveraging the DescribeEntitiesDetectionV2Job service API.
+    * Added cmdlet Get-CMPMEntitiesDetectionV2JobList leveraging the ListEntitiesDetectionV2Jobs service API.
+    * Added cmdlet Get-CMPMPersonalHealthInformationDetectionJob leveraging the DescribePHIDetectionJob service API.
+    * Added cmdlet Get-CMPMPersonalHealthInformationDetectionJobList leveraging the ListPHIDetectionJobs service API.
+    * Added cmdlet Start-CMPMEntitiesDetectionV2Job leveraging the StartEntitiesDetectionV2Job service API.
+    * Added cmdlet Start-CMPMPersonalHealthInformationDetectionJob leveraging the StartPHIDetectionJob service API.
+    * Added cmdlet Stop-CMPMEntitiesDetectionV2Job leveraging the StopEntitiesDetectionV2Job service API.
+    * Added cmdlet Stop-CMPMPersonalHealthInformationDetectionJob leveraging the StopPHIDetectionJob service API.
+  * Amazon Database Migration Service
+    * Added cmdlet Remove-DMSConnection leveraging the DeleteConnection service API.
+    * Modified cmdlet Edit-DMSEndpoint: added parameter S3Settings_ParquetTimestampInMillisecond.
+    * Modified cmdlet New-DMSEndpoint: added parameter S3Settings_ParquetTimestampInMillisecond.
+  * Amazon DataSync
+    * Modified cmdlet New-DSYNLocationS3: added parameter S3StorageClass.
+  * Amazon Direct Connect
+    * Modified cmdlet New-DCConnection: added parameter ProviderName.
+    * Modified cmdlet New-DCInterconnect: added parameter ProviderName.
+    * Modified cmdlet New-DCLag: added parameter ProviderName.
+  * Amazon DocumentDB
+    * Added cmdlet Get-DOCCertificate leveraging the DescribeCertificates service API.
+    * Modified cmdlet Edit-DOCDBInstance: added parameter CACertificateIdentifier.
+  * Amazon Elastic Compute Cloud
+    * Added cmdlet Remove-EC2QueuedReservedInstance leveraging the DeleteQueuedReservedInstances service API.
+    * Modified cmdlet New-EC2Instance: added parameter HibernationOptions_Configured.
+    * Modified cmdlet Stop-EC2Instance: added parameter Hibernate.
+    * Modified cmdlet New-EC2ReservedInstance: added parameter PurchaseTime.
+  * Amazon ElastiCache
+    * Modified cmdlet Get-ECUpdateAction: added parameters CacheClusterId and Engine.
+    * Modified cmdlet Start-ECUpdateActionBatch: added parameter CacheClusterId.
+    * Modified cmdlet Stop-ECUpdateActionBatch: added parameter CacheClusterId.
+  * Amazon Elasticsearch
+    * Modified cmdlet New-ESDomain: added parameters DomainEndpointOptions_EnforceHTTPS and DomainEndpointOptions_TLSSecurityPolicy.
+    * Modified cmdlet Update-ESDomainConfig: added parameters DomainEndpointOptions_EnforceHTTPS and DomainEndpointOptions_TLSSecurityPolicy.
+  * Amazon Elemental MediaConvert
+    * Modified cmdlet New-EMCJob: added parameter Tag.
+  * Amazon Elemental MediaPackage
+    * Added cmdlet Get-EMPHarvestJob leveraging the DescribeHarvestJob service API.
+    * Added cmdlet Get-EMPHarvestJobList leveraging the ListHarvestJobs service API.
+    * Added cmdlet New-EMPHarvestJob leveraging the CreateHarvestJob service API.
+    * Modified cmdlet New-EMPOriginEndpoint: added parameter Origination.
+    * Modified cmdlet Update-EMPOriginEndpoint: added parameter Origination.
+  * Amazon Import/Export Snowball
+    * Added cmdlet Get-SNOWSoftwareUpdate leveraging the GetSoftwareUpdates service API.
+  * Amazon Kinesis Firehose
+    * Modified cmdlet New-KINFDeliveryStream: added parameter ElasticsearchDestinationConfiguration_ClusterEndpoint.
+    * Modified cmdlet Update-KINFDestination: added parameter ElasticsearchDestinationUpdate_ClusterEndpoint.
+  * Amazon Lightsail
+    * Added cmdlet Disable-LSAddOn leveraging the DisableAddOn service API.
+    * Added cmdlet Enable-LSAddOn leveraging the EnableAddOn service API.
+    * Added cmdlet Get-LSAutoSnapshot leveraging the GetAutoSnapshots service API.
+    * Added cmdlet Remove-LSAutoSnapshot leveraging the DeleteAutoSnapshot service API.
+    * Modified cmdlet Add-LSResourceTag: added parameter ResourceArn.
+    * Modified cmdlet Copy-LSSnapshot: added parameters RestoreDate, SourceResourceName and UseLatestRestorableAutoSnapshot.
+    * Modified cmdlet New-LSDisk: added parameter AddOn.
+    * Modified cmdlet New-LSDiskFromSnapshot: added parameters AddOn, RestoreDate, SourceDiskName and UseLatestRestorableAutoSnapshot.
+    * Modified cmdlet New-LSInstance: added parameter AddOn.
+    * Modified cmdlet New-LSInstancesFromSnapshot: added parameters AddOn, RestoreDate, SourceInstanceName and UseLatestRestorableAutoSnapshot.
+    * Modified cmdlet Remove-LSDisk: added parameter ForceDeleteAddOn.
+    * Modified cmdlet Remove-LSInstance: added parameter ForceDeleteAddOn.
+    * Modified cmdlet Remove-LSResourceTag: added parameter ResourceArn.
+  * Amazon MQ
+    * Modified cmdlet Update-MQBroker: added parameter HostInstanceType.
+  * Amazon Pinpoint
+    * Added cmdlet Get-PINEmailTemplate leveraging the GetEmailTemplate service API.
+    * Added cmdlet Get-PINPushTemplate leveraging the GetPushTemplate service API.
+    * Added cmdlet Get-PINSmsTemplate leveraging the GetSmsTemplate service API.
+    * Added cmdlet Get-PINTemplateList leveraging the ListTemplates service API.
+    * Added cmdlet New-PINEmailTemplate leveraging the CreateEmailTemplate service API.
+    * Added cmdlet New-PINPushTemplate leveraging the CreatePushTemplate service API.
+    * Added cmdlet New-PINSmsTemplate leveraging the CreateSmsTemplate service API.
+    * Added cmdlet Remove-PINEmailTemplate leveraging the DeleteEmailTemplate service API.
+    * Added cmdlet Remove-PINPushTemplate leveraging the DeletePushTemplate service API.
+    * Added cmdlet Remove-PINSmsTemplate leveraging the DeleteSmsTemplate service API.
+    * Added cmdlet Update-PINEmailTemplate leveraging the UpdateEmailTemplate service API.
+    * Added cmdlet Update-PINPushTemplate leveraging the UpdatePushTemplate service API.
+    * Added cmdlet Update-PINSmsTemplate leveraging the UpdateSmsTemplate service API.
+    * Modified cmdlet New-PINCampaign: added parameters EmailTemplate_Name, PushTemplate_Name and SMSTemplate_Name.
+    * Modified cmdlet Send-PINMessage: added parameters EmailTemplate_Name, PushTemplate_Name and SMSTemplate_Name.
+    * Modified cmdlet Send-PINUserMessageBatch: added parameters EmailTemplate_Name, PushTemplate_Name and SMSTemplate_Name.
+    * Modified cmdlet Update-PINCampaign: added parameters EmailTemplate_Name, PushTemplate_Name and SMSTemplate_Name.
+  * Amazon Pinpoint Email
+    * Modified cmdlet New-PINEDeliverabilityTestReport: added parameters Template_TemplateArn and Template_TemplateData.
+    * Modified cmdlet Send-PINEEmail: added parameters Template_TemplateArn and Template_TemplateData.
+  * Amazon RDS DataService
+    * Modified cmdlet Invoke-RDSDStatement: added parameter ResultSetOptions_DecimalReturnType.
+  * Amazon Redshift
+    * Added cmdlet Get-RSNodeConfigurationOption leveraging the DescribeNodeConfigurationOptions service API.
+    * Modified cmdlet Restore-RSFromClusterSnapshot: added parameter NumberOfNode.
+  * Amazon Relational Database Service
+    * Modified cmdlet Get-RDSReservedDBInstance: added parameter LeaseId.
+    * Modified cmdlet New-RDSDBInstanceReadReplica: added parameters Domain and DomainIAMRoleName.
+  * Amazon Transcribe Service
+    * Modified cmdlet Start-TRSTranscriptionJob: added parameter OutputEncryptionKMSKeyId.
+  * Amazon WorkSpaces
+    * Added cmdlet Get-WKSWorkspaceSnapshot leveraging the DescribeWorkspaceSnapshots service API.
+    * Added cmdlet Restore-WKSWorkspace leveraging the RestoreWorkspace service API.
+
+### 3.3.590.0 (2019-09-23)
   * AWS Tools for PowerShell now use AWS .NET SDK 3.3.590.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon Alexa For Business
     * Modified cmdlet New-ALXBProfile: added parameter Locale.
