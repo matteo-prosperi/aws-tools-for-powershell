@@ -1,4 +1,73 @@
-﻿### 3.3.604.0 (2019-10-11)
+﻿### 3.3.618.0 (2019-11-04)
+  * The modular version of AWS Tools for PowerShell (AWS.Tools) includes a preview of the upcoming changes from AWS Tools for Powershell v4. You can find detailed information in the [GitHub announcement](https://github.com/aws/aws-tools-for-powershell/issues/61).
+  * AWS Tools for PowerShell now use AWS .NET SDK 3.3.618.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
+  * Amazon App Mesh
+    * Modified cmdlet New-AMSHRoute: added parameters Match_Metadata, Match_ServiceName, RetryPolicy_GrpcRetryEvent, Spec_GrpcRoute_Action_WeightedTarget, Spec_GrpcRoute_Match_MethodName, Spec_GrpcRoute_RetryPolicy_HttpRetryEvent, Spec_GrpcRoute_RetryPolicy_MaxRetry, Spec_GrpcRoute_RetryPolicy_PerRetryTimeout_Unit, Spec_GrpcRoute_RetryPolicy_PerRetryTimeout_Value, Spec_GrpcRoute_RetryPolicy_TcpRetryEvent, Spec_Http2Route_Action_WeightedTarget, Spec_Http2Route_Match_Header, Spec_Http2Route_Match_Method, Spec_Http2Route_Match_Prefix, Spec_Http2Route_Match_Scheme, Spec_Http2Route_RetryPolicy_HttpRetryEvent, Spec_Http2Route_RetryPolicy_MaxRetry, Spec_Http2Route_RetryPolicy_PerRetryTimeout_Unit, Spec_Http2Route_RetryPolicy_PerRetryTimeout_Value, Spec_Http2Route_RetryPolicy_TcpRetryEvent, Spec_HttpRoute_Match_Header, Spec_HttpRoute_Match_Method, Spec_HttpRoute_Match_Prefix, Spec_HttpRoute_Match_Scheme, Spec_HttpRoute_RetryPolicy_HttpRetryEvent, Spec_HttpRoute_RetryPolicy_MaxRetry, Spec_HttpRoute_RetryPolicy_PerRetryTimeout_Unit, Spec_HttpRoute_RetryPolicy_PerRetryTimeout_Value and Spec_HttpRoute_RetryPolicy_TcpRetryEvent.
+    * Modified cmdlet Update-AMSHRoute: added parameters Match_Metadata, Match_ServiceName, RetryPolicy_GrpcRetryEvent, Spec_GrpcRoute_Action_WeightedTarget, Spec_GrpcRoute_Match_MethodName, Spec_GrpcRoute_RetryPolicy_HttpRetryEvent, Spec_GrpcRoute_RetryPolicy_MaxRetry, Spec_GrpcRoute_RetryPolicy_PerRetryTimeout_Unit, Spec_GrpcRoute_RetryPolicy_PerRetryTimeout_Value, Spec_GrpcRoute_RetryPolicy_TcpRetryEvent, Spec_Http2Route_Action_WeightedTarget, Spec_Http2Route_Match_Header, Spec_Http2Route_Match_Method, Spec_Http2Route_Match_Prefix, Spec_Http2Route_Match_Scheme, Spec_Http2Route_RetryPolicy_HttpRetryEvent, Spec_Http2Route_RetryPolicy_MaxRetry, Spec_Http2Route_RetryPolicy_PerRetryTimeout_Unit, Spec_Http2Route_RetryPolicy_PerRetryTimeout_Value, Spec_Http2Route_RetryPolicy_TcpRetryEvent, Spec_HttpRoute_Match_Header, Spec_HttpRoute_Match_Method, Spec_HttpRoute_Match_Prefix, Spec_HttpRoute_Match_Scheme, Spec_HttpRoute_RetryPolicy_HttpRetryEvent, Spec_HttpRoute_RetryPolicy_MaxRetry, Spec_HttpRoute_RetryPolicy_PerRetryTimeout_Unit, Spec_HttpRoute_RetryPolicy_PerRetryTimeout_Value and Spec_HttpRoute_RetryPolicy_TcpRetryEvent.
+  * Amazon AppStream
+    * Modified cmdlet New-APSStack: added parameter EmbedHostDomain.
+    * Modified cmdlet Update-APSStack: added parameter EmbedHostDomain.
+  * Amazon Batch
+    * Modified cmdlet New-BATComputeEnvironment: added parameter ComputeResources_AllocationStrategy.
+  * Amazon Chime
+    * Added cmdlet Add-CHMPhoneNumbersToVoiceConnectorGroup leveraging the AssociatePhoneNumbersWithVoiceConnectorGroup service API.
+    * Added cmdlet Get-CHMPhoneNumberSetting leveraging the GetPhoneNumberSettings service API.
+    * Added cmdlet Get-CHMVoiceConnectorGroup leveraging the GetVoiceConnectorGroup service API.
+    * Added cmdlet Get-CHMVoiceConnectorGroupList leveraging the ListVoiceConnectorGroups service API.
+    * Added cmdlet Get-CHMVoiceConnectorLoggingConfiguration leveraging the GetVoiceConnectorLoggingConfiguration service API.
+    * Added cmdlet Get-CHMVoiceConnectorStreamingConfiguration leveraging the GetVoiceConnectorStreamingConfiguration service API.
+    * Added cmdlet New-CHMVoiceConnectorGroup leveraging the CreateVoiceConnectorGroup service API.
+    * Added cmdlet Remove-CHMPhoneNumbersFromVoiceConnectorGroup leveraging the DisassociatePhoneNumbersFromVoiceConnectorGroup service API.
+    * Added cmdlet Remove-CHMVoiceConnectorGroup leveraging the DeleteVoiceConnectorGroup service API.
+    * Added cmdlet Remove-CHMVoiceConnectorStreamingConfiguration leveraging the DeleteVoiceConnectorStreamingConfiguration service API.
+    * Added cmdlet Update-CHMPhoneNumberSetting leveraging the UpdatePhoneNumberSettings service API.
+    * Added cmdlet Update-CHMVoiceConnectorGroup leveraging the UpdateVoiceConnectorGroup service API.
+    * Added cmdlet Write-CHMVoiceConnectorLoggingConfiguration leveraging the PutVoiceConnectorLoggingConfiguration service API.
+    * Added cmdlet Write-CHMVoiceConnectorStreamingConfiguration leveraging the PutVoiceConnectorStreamingConfiguration service API.
+    * Modified cmdlet Add-CHMPhoneNumbersToVoiceConnector: added parameter ForceAssociate.
+    * Modified cmdlet New-CHMVoiceConnector: added parameter AwsRegion.
+    * Modified cmdlet Update-CHMPhoneNumber: added parameter CallingName.
+  * Amazon Connect Service
+    * Added cmdlet Get-CONNContactFlowList leveraging the ListContactFlows service API.
+    * Added cmdlet Get-CONNHoursOfOperationList leveraging the ListHoursOfOperations service API.
+    * Added cmdlet Get-CONNPhoneNumberList leveraging the ListPhoneNumbers service API.
+    * Added cmdlet Get-CONNQueueList leveraging the ListQueues service API.
+  * Amazon EC2 Container Registry
+    * Added cmdlet Get-ECRImageScanFinding leveraging the DescribeImageScanFindings service API.
+    * Added cmdlet Start-ECRImageScan leveraging the StartImageScan service API.
+    * Added cmdlet Write-ECRImageScanningConfiguration leveraging the PutImageScanningConfiguration service API.
+    * Modified cmdlet New-ECRRepository: added parameter ImageScanningConfiguration_ScanOnPush.
+  * Amazon Elastic Compute Cloud
+    * Modified cmdlet New-EC2FpgaImage: added parameter TagSpecification.
+  * Amazon ElastiCache
+    * Added cmdlet Complete-ECMigration leveraging the CompleteMigration service API.
+    * Added cmdlet Start-ECMigration leveraging the StartMigration service API.
+  * Amazon IoT Events
+    * Modified cmdlet New-IOTEDetectorModel: added parameter EvaluationMethod.
+    * Modified cmdlet Update-IOTEDetectorModel: added parameter EvaluationMethod.
+  * Amazon Lex
+    * Modified cmdlet Get-LEXSession: added parameter CheckpointLabelFilter.
+    * Modified cmdlet Write-LEXSession: added parameter RecentIntentSummaryView.
+  * Amazon Managed Streaming for Kafka
+    * Added cmdlet Update-MSKBrokerCount leveraging the UpdateBrokerCount service API.
+  * Amazon OpsWorksCM
+    * Modified cmdlet New-OWCMServer: added parameters CustomCertificate, CustomDomain and CustomPrivateKey.
+  * Amazon Personalize
+    * Modified cmdlet New-PERSSolutionVersion: added parameter TrainingMode.
+  * Amazon Relational Database Service
+    * Added cmdlet Get-RDSCustomAvailabilityZone leveraging the DescribeCustomAvailabilityZones service API.
+    * Added cmdlet Get-RDSInstallationMedia leveraging the DescribeInstallationMedia service API.
+    * Added cmdlet Import-RDSInstallationMedia leveraging the ImportInstallationMedia service API.
+    * Added cmdlet New-RDSCustomAvailabilityZone leveraging the CreateCustomAvailabilityZone service API.
+    * Added cmdlet Remove-RDSCustomAvailabilityZone leveraging the DeleteCustomAvailabilityZone service API.
+    * Added cmdlet Remove-RDSInstallationMedia leveraging the DeleteInstallationMedia service API.
+  * Amazon Simple Storage Service
+    * Modified cmdlet Select-S3ObjectContent: added parameters ScanRange_End and ScanRange_Start.
+  * Amazon Transfer for SFTP
+    * Modified cmdlet New-TFRUser: added parameters HomeDirectoryMapping and HomeDirectoryType.
+    * Modified cmdlet Update-TFRUser: added parameters HomeDirectoryMapping and HomeDirectoryType.
+
+### 3.3.604.0 (2019-10-11)
   * AWS Tools for PowerShell now use AWS .NET SDK 3.3.604.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon Amplify
     * Added cmdlet Get-AMPArtifactList leveraging the ListArtifacts service API.
