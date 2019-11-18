@@ -1,4 +1,14 @@
-﻿### 3.3.618.0 (2019-11-04)
+﻿### 3.3.618.1 (2019-11-18)
+  * This is a minor update to AWS.Tools only, the following changes don't apply to AWSPowerShell and AWSPowerShell.NetCore.
+  * Released an updated preview of [AWS.Tools.Installer](https://www.powershellgallery.com/packages/AWS.Tools.Installer) which makes it easier to install, update and uninstall other AWS.Tools modules. You can use a single command like `Install-AWSToolsModule AWS.Tools.EC2,AWS.Tools.S3` to install multiple modules. You can also update all your installed AWS.Tools modules and remove old versions by running `Update-AWSToolsModule -CleanUp`.
+  * Fixed behavior of `Get-AWSPowerShellVersion -ListServiceVersionInfo` and Get-AWSCmdletName: the cmdlets now report services and cmdlets also for modules that are not imported.
+  * Added cmdlet Get-AWSService to improve discoverability of supported AWS services and the corresponding AWS.Tools module names.
+  * Amazon Elastic Compute Cloud (EC2)
+    * Modified cmdlet Import-EC2KeyPair to automatically perform Base64 encoding of the key when using the new parameter PublicKey.
+  * Amazon Systems Manager
+    * Added cmdlet Get-SSMLatestEC2Image replacing the functionality of Get-EC2ImageByName which is now marked as obsolete.
+
+### 3.3.618.0 (2019-11-04)
   * The modular version of AWS Tools for PowerShell (AWS.Tools) includes a preview of the upcoming changes from AWS Tools for Powershell v4. You can find detailed information in the [GitHub announcement](https://github.com/aws/aws-tools-for-powershell/issues/61).
   * AWS Tools for PowerShell now use AWS .NET SDK 3.3.618.0 and leverage its new features and improvements. Please find a description of the changes at https://github.com/aws/aws-sdk-net/blob/master/SDK.CHANGELOG.md.
   * Amazon App Mesh
